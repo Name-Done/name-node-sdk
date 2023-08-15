@@ -1,0 +1,13 @@
+.gitignore
+.openapi-generator-ignore
+api.ts
+api/apis.ts
+api/emailDomainNameApi.ts
+api/familyNameApi.ts
+api/givenNameApi.ts
+git_push.sh
+model/badRequestResponseDto.ts
+model/models.ts
+model/nameResponseDto.ts
+package.json
+tsconfig.json
