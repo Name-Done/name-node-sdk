@@ -4,6 +4,8 @@ export * from './familyNameApi';
 import { FamilyNameApi } from './familyNameApi';
 export * from './givenNameApi';
 import { GivenNameApi } from './givenNameApi';
+export * from './topLevelDomainNameApi';
+import { TopLevelDomainNameApi } from './topLevelDomainNameApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -15,4 +17,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [EmailDomainNameApi, FamilyNameApi, GivenNameApi];
+export const APIS = [EmailDomainNameApi, FamilyNameApi, GivenNameApi, TopLevelDomainNameApi];

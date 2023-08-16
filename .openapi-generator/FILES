@@ -5,6 +5,7 @@ api/apis.ts
 api/emailDomainNameApi.ts
 api/familyNameApi.ts
 api/givenNameApi.ts
+api/topLevelDomainNameApi.ts
 git_push.sh
 model/badRequestResponseDto.ts
 model/models.ts
