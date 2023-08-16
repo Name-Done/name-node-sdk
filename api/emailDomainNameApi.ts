@@ -90,7 +90,7 @@ export class EmailDomainNameApi {
     /**
      * 
      * @summary Get a list of email domain names
-     * @param name Name query parameter
+     * @param name Email domain name query parameter
      */
     public async emailDomainNameControllerGet (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
         const localVarPath = this.basePath + '/name/email-domain';
