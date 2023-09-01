@@ -1,7 +1,11 @@
+export * from './domainNameApi';
+import { DomainNameApi } from './domainNameApi';
 export * from './emailDomainNameApi';
 import { EmailDomainNameApi } from './emailDomainNameApi';
 export * from './familyNameApi';
 import { FamilyNameApi } from './familyNameApi';
+export * from './genderApi';
+import { GenderApi } from './genderApi';
 export * from './givenNameApi';
 import { GivenNameApi } from './givenNameApi';
 export * from './topLevelDomainNameApi';
@@ -17,4 +21,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [EmailDomainNameApi, FamilyNameApi, GivenNameApi, TopLevelDomainNameApi];
+export const APIS = [DomainNameApi, EmailDomainNameApi, FamilyNameApi, GenderApi, GivenNameApi, TopLevelDomainNameApi];

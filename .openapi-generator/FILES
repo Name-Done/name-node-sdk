@@ -2,8 +2,10 @@
 .openapi-generator-ignore
 api.ts
 api/apis.ts
+api/domainNameApi.ts
 api/emailDomainNameApi.ts
 api/familyNameApi.ts
+api/genderApi.ts
 api/givenNameApi.ts
 api/topLevelDomainNameApi.ts
 git_push.sh
