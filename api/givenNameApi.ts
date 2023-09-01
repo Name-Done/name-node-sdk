@@ -93,7 +93,7 @@ export class GivenNameApi {
      * @param name Name query parameter
      * @param gender Gender query parameter
      */
-    public async getGivenNames (name: string, gender?: 'male' | 'female', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
+    public async getGivenNames (name?: string, gender?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
         const localVarPath = this.basePath + '/name/given';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -106,17 +106,12 @@ export class GivenNameApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'name' is not null or undefined
-        if (name === null || name === undefined) {
-            throw new Error('Required parameter name was null or undefined when calling getGivenNames.');
-        }
-
         if (name !== undefined) {
             localVarQueryParameters['name'] = ObjectSerializer.serialize(name, "string");
         }
 
         if (gender !== undefined) {
-            localVarQueryParameters['gender'] = ObjectSerializer.serialize(gender, "'male' | 'female'");
+            localVarQueryParameters['gender'] = ObjectSerializer.serialize(gender, "string");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

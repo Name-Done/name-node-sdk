@@ -92,7 +92,7 @@ export class FamilyNameApi {
      * @summary Get a list of family names
      * @param name Name query parameter
      */
-    public async getFamilyNames (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
+    public async getFamilyNames (name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
         const localVarPath = this.basePath + '/name/family';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -104,11 +104,6 @@ export class FamilyNameApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'name' is not null or undefined
-        if (name === null || name === undefined) {
-            throw new Error('Required parameter name was null or undefined when calling getFamilyNames.');
-        }
 
         if (name !== undefined) {
             localVarQueryParameters['name'] = ObjectSerializer.serialize(name, "string");

@@ -92,7 +92,7 @@ export class GenderApi {
      * @summary Get a list of genders
      * @param name Name query parameter
      */
-    public async getGenders (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
+    public async getGenders (name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NameResponseDto;  }> {
         const localVarPath = this.basePath + '/name/gender';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -104,11 +104,6 @@ export class GenderApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'name' is not null or undefined
-        if (name === null || name === undefined) {
-            throw new Error('Required parameter name was null or undefined when calling getGenders.');
-        }
 
         if (name !== undefined) {
             localVarQueryParameters['name'] = ObjectSerializer.serialize(name, "string");
